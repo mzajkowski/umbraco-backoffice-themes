@@ -1,0 +1,236 @@
+﻿/*
+Theme Name: Hacker
+Theme URI: https://our.umbraco.org/
+Author: The Umbraco Community
+Author URI: https://our.umbraco.org/
+Description: Hack The Planet!
+Version: 1.0
+*/
+
+body {
+    color: lime;
+    background-color: #000 !important;
+    font-family: monospace;
+    -webkit-transition: background-color 0.3s ease-in;
+    transition: background-color 0.3s ease-in
+}
+
+body a {
+    color: lime;
+}
+
+body .umb-editor-header,
+body .umb-editor-sub-header,
+body .umb-modalcolumn-header {
+    color: lime !important;
+    background-color: #000 !important;
+    -webkit-transition: background-color 0.3s ease-in;
+    transition: background-color 0.3s ease-in
+}
+
+body .umb-editor-header {
+    border-bottom: 1px solid lime;
+}
+
+body .umb-modalcolumn-header {
+    border-bottom: 1px solid lime;
+}
+
+body .umb-modalcolumn-body {
+    color: lime !important;
+    background-color: #000 !important;
+    -webkit-transition: background-color 0.3s ease-in;
+    transition: background-color 0.3s ease-in
+}
+
+/* Search */
+body .form-search .icon,
+body .form-search .icon-search {
+    color: #000;
+}
+
+body .form-search .search-input,
+body input.umb-panel-header-name-input {
+    background: lime;
+    border-color: #000;
+}
+
+body .form-search .search-input:hover,
+body .form-search .search-input:focus,
+body .form-search .search-input:focus:hover {
+}
+
+/* Buttons */
+body .btn,
+body .btn-info {
+    color: #000;
+    background: lime;
+}
+
+body .btn-primary .caret,
+body .btn-warning .caret,
+body .btn-danger .caret,
+body .btn-info .caret,
+body .btn-success .caret,
+body .btn-inverse .caret {
+    border-top-color: #000;
+    border-bottom-color: #000;
+}
+
+/* Sections */
+body ul.sections {
+    background-color: #000 !important;
+    border-right: 1px solid lime;
+    -webkit-transition: background-color 0.3s ease-in;
+    transition: background-color 0.3s ease-in
+}
+
+body ul.sections li {
+    border-left: 4px #000 solid;
+}
+
+body ul.sections li.avatar a img {
+    border: 1px solid lime;
+}
+
+body ul.sections li [class^="icon-"],
+body ul.sections li [class*=" icon-"],
+body ul.sections li img.icon-section {
+    color: lime;
+}
+
+body ul.sections li.current,
+body ul.sections li:hover {
+    background-color: lime !important;
+    border-left: 4px lime solid;
+    -webkit-transition: background-color 0.3s ease-in;
+    transition: background-color 0.3s ease-in
+}
+
+body ul.sections li.current a span,
+body ul.sections li:hover a span,
+body ul.sections li.current [class^="icon-"],
+body ul.sections li:hover [class^="icon-"],
+body ul.sections li.current [class*=" icon-"],
+body ul.sections li:hover [class*=" icon-"],
+body ul.sections li.current img.icon-section,
+body ul.sections li:hover img.icon-section {
+    color: #000;
+}
+
+body .ui-resizable-e {
+    background-color: lime;
+    border: 1px solid #000;
+}
+
+body .navigation-inner-container {
+    border-right: 1px solid lime;
+}
+
+/* Umbraco Tree */
+body .umb-tree div:hover {
+    background: lime;
+}
+
+body .umb-tree li.root > div a,
+body .umb-tree li.root h5,
+body .umb-tree-header,
+body .umb-tree .icon,
+body .umb-actions i {
+    color: lime;
+}
+
+body .umb-tree li.current > div,
+body .umb-tree div.selected {
+    background: lime;
+}
+
+body .umb-tree li.current > div a.umb-options i,
+body .umb-tree div.selected i {
+    background: #000;
+    border-color: #000;
+}
+
+body .umb-tree li.current > div a,
+body .umb-tree li.current > div i.icon,
+body .umb-tree li.current > div ins,
+body .umb-tree li > div:hover a,
+body .umb-tree li > div:hover i.icon,
+body .umb-tree li > div:hover ins {
+    color: #000 !important;
+    background-color: lime;
+    border-color: lime;
+}
+
+/* Umbraco Actions */
+body .umb-actions li.sep {
+    border-top: 1px solid lime;
+}
+
+body .umb-actions a:hover,
+body .umb-actions a:focus,
+body .umb-actions li.selected {
+    color: #000 !important;
+    background: lime !important;
+}
+
+body .umb-actions a:hover i,
+body .umb-actions a:focus i,
+body .umb-actions li.selected i {
+    color: #000;
+}
+
+/* Editor */
+body .nav-tabs {
+    border-bottom: 1px solid lime;
+}
+
+body .nav-tabs > .active > a,
+body .nav-tabs > .active > a:hover,
+body .nav-tabs > .active > a:focus {
+    background-color: lime;
+    border: 1px solid lime;
+}
+
+body .nav-tabs > li > a:hover,
+body .nav-tabs > li > a:focus {
+    background-color: lime;
+    border-color: lime;
+}
+
+body .umb-editor-wrapper {
+    background: #000;
+}
+
+body .umb-editor-drawer {
+    background: #000;
+    border-top: 1px solid lime;
+}
+
+body .umb-control-group {
+    border-bottom: 1px solid lime;
+}
+
+body label.control-label,
+body .control-label {
+    color: lime;
+}
+
+body textarea, input[type="text"],
+body input[type="password"],
+body input[type="datetime"],
+body input[type="datetime-local"],
+body input[type="date"],
+body input[type="month"],
+body input[type="time"],
+body input[type="week"],
+body input[type="number"],
+body input[type="email"],
+body input[type="url"],
+body input[type="search"],
+body input[type="tel"],
+body input[type="color"],
+body .uneditable-input {
+    background-color: lime;
+    border: 1px solid #000;
+}
