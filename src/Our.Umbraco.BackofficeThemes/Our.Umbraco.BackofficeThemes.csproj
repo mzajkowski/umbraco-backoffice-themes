@@ -43,15 +43,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Web\UI\App_Plugins\Our.Umbraco.BackofficeThemes\package.manifest" />
+    <None Include="Web\UI\App_Plugins\BackofficeThemes\package.manifest" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Web\UI\App_Plugins\Our.Umbraco.BackofficeThemes\Css\themes.css" />
-    <Content Include="Web\UI\App_Plugins\Our.Umbraco.BackofficeThemes\Img\default.png" />
-    <Content Include="Web\UI\App_Plugins\Our.Umbraco.BackofficeThemes\Img\hacker.png" />
-    <Content Include="Web\UI\App_Plugins\Our.Umbraco.BackofficeThemes\Img\vintage.png" />
-    <Content Include="Web\UI\App_Plugins\Our.Umbraco.BackofficeThemes\Js\theming.js" />
-    <Content Include="Web\UI\App_Plugins\Our.Umbraco.BackofficeThemes\Views\dashboard.html" />
+    <Content Include="Web\UI\App_Plugins\BackofficeThemes\css\hacker.css" />
+    <Content Include="Web\UI\App_Plugins\BackofficeThemes\img\default.png" />
+    <Content Include="Web\UI\App_Plugins\BackofficeThemes\img\hacker.png" />
+    <Content Include="Web\UI\App_Plugins\BackofficeThemes\img\vintage.png" />
+    <Content Include="Web\UI\App_Plugins\BackofficeThemes\js\themes.js" />
+    <Content Include="Web\UI\App_Plugins\BackofficeThemes\views\dashboard.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
