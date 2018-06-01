@@ -1,49 +1,46 @@
 ﻿angular.module("umbraco").controller("Our.Umbraco.BackofficeThemes.Controllers.DashboardController", [
     "$scope",
+    "Our.Umbraco.BackofficeThemes.Resources",
     "Our.Umbraco.BackofficeThemes.Services",
-    function ($scope, backofficeThemesService) {
+    function ($scope, backofficeThemesResources, backofficeThemesService) {
 
         var vm = this;
 
-        vm.version = "0.1.0";
+        vm.version = "0.2.1";
 
-        vm.themes = [
-            {
-                alias: "default",
-                title: "Default (7.6+)",
-                path: "",
-                thumbnail: "/App_Plugins/BackofficeThemes/img/default.png",
-                description: ""
-            },
-            {
-                alias: "vintage",
-                title: "Vintage (7.x)",
-                path: "",
-                thumbnail: "/App_Plugins/BackofficeThemes/img/vintage.png",
-                description: ""
-            },
-            {
-                alias: "hacker",
-                title: "Hacker",
-                path: "/App_Plugins/BackofficeThemes/css/hacker.css",
-                thumbnail: "/App_Plugins/BackofficeThemes/img/hacker.png",
-                description: "Hack The Planet!"
-            },
-            {
-                alias: "dark",
-                title: "Dark",
-                path: "",
-                thumbnail: "//placehold.it/144x66?text=!",
-                description: ""
-            }
-        ];
+        backofficeThemesResources.getThemes().then(function (themes) {
+            vm.themes = themes;
+        });
+
+        vm.currentTheme = backofficeThemesService.getTheme();
+
+        vm.clearCurrentTheme = function () {
+            backofficeThemesService.unloadTheme();
+            vm.currentTheme = null;
+        };
 
         vm.setTheme = function (theme) {
             backofficeThemesService.setTheme(theme);
+            vm.currentTheme = theme;
         };
 
     }
 ]);
+
+angular.module("umbraco.resources").factory("Our.Umbraco.BackofficeThemes.Resources",
+    function ($q, $http, umbRequestHelper) {
+        return {
+            getThemes: function (data, pageId) {
+                return umbRequestHelper.resourcePromise(
+                    $http({
+                        url: "/umbraco/backoffice/BackofficeThemes/BackofficeThemesApi/GetThemes",
+                        method: "GET"
+                    }),
+                    "Failed to retrieve themes"
+                );
+            }
+        };
+    });
 
 angular.module("umbraco.services").factory("Our.Umbraco.BackofficeThemes.Services", [
     "assetsService",
@@ -68,21 +65,35 @@ angular.module("umbraco.services").factory("Our.Umbraco.BackofficeThemes.Service
             },
 
             loadTheme: function (theme) {
-                if (!!theme.path) {
-                    service.loadCss("backoffice-theme-css", theme.path);
-                } else {
-                    notificationsService.error("loadTheme", theme.alias);
+                if (!!theme) {
+                    if (!!theme.path) {
+                        service.loadCss("backoffice-theme-css", theme.path);
+                    } else {
+                        notificationsService.error("loadTheme", theme.alias);
+                    }
                 }
             },
 
             setTheme: function (theme) {
-                if (!!theme.path) {
-                    localStorageService.set("backofficeTheme", theme);
-                    service.loadTheme(theme);
-                    notificationsService.success("setTheme", theme.alias);
-                } else {
-                    notificationsService.error("setTheme", theme.alias);
+                if (!!theme) {
+                    if (!!theme.path) {
+                        localStorageService.set("backofficeTheme", theme);
+                        service.loadTheme(theme);
+                        notificationsService.success("setTheme", theme.alias);
+                    } else {
+                        notificationsService.error("setTheme", theme.alias);
+                    }
                 }
+            },
+
+            unloadCss: function (id) {
+                $("#" + id).remove();
+            },
+
+            unloadTheme: function () {
+                localStorageService.remove("backofficeTheme");
+                service.unloadCss("backoffice-theme-css");
+                notificationsService.success("unloadTheme");
             },
 
         };
@@ -91,14 +102,13 @@ angular.module("umbraco.services").factory("Our.Umbraco.BackofficeThemes.Service
     }
 ]);
 
-// TODO: Find out if there's a better way of loading up the theme CSS
 angular.module("umbraco").run([
     "$rootScope",
     "Our.Umbraco.BackofficeThemes.Services",
-    function ($rootScope, service) {
+    function ($rootScope, backofficeThemesService) {
         $rootScope.$on("$viewContentLoaded", function (event) {
-            var theme = service.getTheme();
-            service.loadTheme(theme);
+            var theme = backofficeThemesService.getTheme();
+            backofficeThemesService.loadTheme(theme);
         });
     }
 ]);

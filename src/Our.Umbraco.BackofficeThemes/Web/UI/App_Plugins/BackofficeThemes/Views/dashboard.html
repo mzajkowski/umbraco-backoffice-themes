@@ -1,7 +1,10 @@
 ﻿<div ng-controller="Our.Umbraco.BackofficeThemes.Controllers.DashboardController as vm">
 
     <h3>Backoffice Themes <small>v{{vm.version}}</small></h3>
-    <p>Pick a theme...</p>
+    <p>
+        <span>Pick a theme...</span>
+        <span ng-if="!!vm.currentTheme"><a href="" ng-click="vm.clearCurrentTheme()">Clear current theme.</a></span>
+    </p>
 
     <div class="row-fluid">
         <ul class="thumbnails">
@@ -9,7 +12,10 @@
                 <a class="btn-link" target="_blank" href="" ng-click="vm.setTheme(theme)" title="{{theme.title}}">
                     <div class="thumbnail" style="margin-right: 20px; padding: 20px;">
                         <img ng-src="{{theme.thumbnail}}" alt="{{theme.title}}">
-                        <div style="font-weight: bold; text-align: center; margin: 20px 0 0;">{{theme.title}}</div>
+                        <div style="text-align: center; margin: 20px 0 0;">
+                            <strong>{{theme.title}}</strong><br />
+                            <small>{{theme.description}}</small>
+                        </div>
                     </div>
                 </a>
             </li>
