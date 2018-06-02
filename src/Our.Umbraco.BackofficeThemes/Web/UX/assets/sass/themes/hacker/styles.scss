@@ -32,7 +32,8 @@ body {
       background-color: var(--theme-primary-background-color) !important;
       -webkit-transition: background-color 0.3s ease-in;
       transition: background-color 0.3s ease-in
-    } //* Search */
+    } 
+    //* Search */
     .form-search {
       .icon,
       .icon-search {
@@ -48,7 +49,8 @@ body {
     input.umb-panel-header-name-input {
       background: var(--theme-primary-text-color);
       border-color: var(--theme-primary-background-color);
-    } //* Buttons */
+    } 
+    //* Buttons */
     .btn,
     .btn-info {
       color: var(--theme-primary-background-color);
@@ -62,7 +64,8 @@ body {
     .btn-inverse .caret {
       border-top-color: var(--theme-primary-background-color);
       border-bottom-color: var(--theme-primary-background-color);
-    } //* Sections */
+    } 
+    //* Sections */
     ul.sections {
       background-color: var(--theme-primary-background-color) !important;
       border-right: 1px solid var(--theme-primary-text-color);
@@ -102,7 +105,8 @@ body {
     }
     .navigation-inner-container {
       border-right: 1px solid var(--theme-primary-text-color);
-    } //* Umbraco Tree */
+    } 
+    //* Umbraco Tree */
     .umb-tree div:hover {
       background: var(--theme-primary-text-color);
     }
@@ -131,7 +135,8 @@ body {
       color: var(--theme-primary-background-color) !important;
       background-color: var(--theme-primary-text-color);
       border-color: var(--theme-primary-text-color);
-    } //* Umbraco Actions */
+    } 
+    //* Umbraco Actions */
     .umb-actions li.sep {
       border-top: 1px solid var(--theme-primary-text-color);
     }
@@ -194,6 +199,4 @@ body {
       border: 1px solid var(--theme-primary-background-color);
     }
   }
-}
-
 }
