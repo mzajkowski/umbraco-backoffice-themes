@@ -1,0 +1,190 @@
+html {
+  --theme-primary-text-color: lime;
+  --theme-primary-background-color: black;
+}
+
+body.hackerTh {
+  color: var(--theme-primary-text-color);
+  background-color: var(--theme-primary-background-color) !important;
+  font-family: monospace;
+  -webkit-transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in a;
+  transition-color: var(--theme-primary-text-color);
+}
+body.hackerTh .umb-editor-header,
+body.hackerTh .umb-editor-sub-header,
+body.hackerTh .umb-modalcolumn-header {
+  color: var(--theme-primary-text-color) !important;
+  background-color: var(--theme-primary-background-color) !important;
+  -webkit-transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
+}
+body.hackerTh .umb-editor-header {
+  border-bottom: 1px solid var(--theme-primary-text-color);
+}
+body.hackerTh .umb-modalcolumn-header {
+  border-bottom: 1px solid var(--theme-primary-text-color);
+}
+body.hackerTh .umb-modalcolumn-body {
+  color: var(--theme-primary-text-color) !important;
+  background-color: var(--theme-primary-background-color) !important;
+  -webkit-transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
+}
+body.hackerTh .form-search .icon,
+body.hackerTh .form-search .icon-search {
+  color: var(--theme-primary-background-color);
+}
+body.hackerTh .form-search .search-input:hover,
+body.hackerTh .form-search .search-input:focus,
+body.hackerTh .form-search .search-input:focus:hover {
+  color: inherit;
+}
+body.hackerTh .form-search .search-input,
+body.hackerTh input.umb-panel-header-name-input {
+  background: var(--theme-primary-text-color);
+  border-color: var(--theme-primary-background-color);
+}
+body.hackerTh .btn,
+body.hackerTh .btn-info {
+  color: var(--theme-primary-background-color);
+  background: var(--theme-primary-text-color);
+}
+body.hackerTh .btn-primary .caret,
+body.hackerTh .btn-warning .caret,
+body.hackerTh .btn-danger .caret,
+body.hackerTh .btn-info .caret,
+body.hackerTh .btn-success .caret,
+body.hackerTh .btn-inverse .caret {
+  border-top-color: var(--theme-primary-background-color);
+  border-bottom-color: var(--theme-primary-background-color);
+}
+body.hackerTh ul.sections {
+  background-color: var(--theme-primary-background-color) !important;
+  border-right: 1px solid var(--theme-primary-text-color);
+  -webkit-transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in li;
+  transition-border-left: 4px var(--theme-primary-background-color) solid;
+}
+body.hackerTh ul.sections li.avatar a img {
+  border: 1px solid var(--theme-primary-text-color);
+}
+body.hackerTh ul.sections li [class^="icon-"],
+body.hackerTh ul.sections li [class*=" icon-"],
+body.hackerTh ul.sections li img.icon-section {
+  color: var(--theme-primary-text-color);
+}
+body.hackerTh ul.sections li.current,
+body.hackerTh ul.sections li:hover {
+  background-color: var(--theme-primary-text-color) !important;
+  border-left: 4px var(--theme-primary-text-color) solid;
+  -webkit-transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
+}
+body.hackerTh ul.sections li.current a span,
+body.hackerTh ul.sections li:hover a span,
+body.hackerTh ul.sections li.current [class^="icon-"],
+body.hackerTh ul.sections li:hover [class^="icon-"],
+body.hackerTh ul.sections li.current [class*=" icon-"],
+body.hackerTh ul.sections li:hover [class*=" icon-"],
+body.hackerTh ul.sections li.current img.icon-section,
+body.hackerTh ul.sections li:hover img.icon-section {
+  color: var(--theme-primary-background-color);
+}
+body.hackerTh .ui-resizable-e {
+  background-color: var(--theme-primary-text-color);
+  border: 1px solid var(--theme-primary-background-color);
+}
+body.hackerTh .navigation-inner-container {
+  border-right: 1px solid var(--theme-primary-text-color);
+}
+body.hackerTh .umb-tree div:hover {
+  background: var(--theme-primary-text-color);
+}
+body.hackerTh .umb-tree li.root > div a,
+body.hackerTh .umb-tree li.root h5,
+body.hackerTh .umb-tree-header,
+body.hackerTh .umb-tree .icon,
+body.hackerTh .umb-actions i {
+  color: var(--theme-primary-text-color);
+}
+body.hackerTh .umb-tree li.current > div,
+body.hackerTh .umb-tree div.selected {
+  background: var(--theme-primary-text-color);
+}
+body.hackerTh .umb-tree li.current > div a.umb-options i,
+body.hackerTh .umb-tree div.selected i {
+  background: var(--theme-primary-background-color);
+  border-color: var(--theme-primary-background-color);
+}
+body.hackerTh .umb-tree li.current > div a,
+body.hackerTh .umb-tree li.current > div i.icon,
+body.hackerTh .umb-tree li.current > div ins,
+body.hackerTh .umb-tree li > div:hover a,
+body.hackerTh .umb-tree li > div:hover i.icon,
+body.hackerTh .umb-tree li > div:hover ins {
+  color: var(--theme-primary-background-color) !important;
+  background-color: var(--theme-primary-text-color);
+  border-color: var(--theme-primary-text-color);
+}
+body.hackerTh .umb-actions li.sep {
+  border-top: 1px solid var(--theme-primary-text-color);
+}
+body.hackerTh .umb-actions a:hover,
+body.hackerTh .umb-actions a:focus,
+body.hackerTh .umb-actions li.selected {
+  color: var(--theme-primary-background-color) !important;
+  background: var(--theme-primary-text-color) !important;
+}
+body.hackerTh .umb-actions a:hover i,
+body.hackerTh .umb-actions a:focus i,
+body.hackerTh .umb-actions li.selected i {
+  color: var(--theme-primary-background-color);
+}
+body.hackerTh .nav-tabs {
+  border-bottom: 1px solid var(--theme-primary-text-color);
+}
+body.hackerTh .nav-tabs > .active > a,
+body.hackerTh .nav-tabs > .active > a:hover,
+body.hackerTh .nav-tabs > .active > a:focus {
+  background-color: var(--theme-primary-text-color);
+  border: 1px solid var(--theme-primary-text-color);
+}
+body.hackerTh .nav-tabs > li > a:hover,
+body.hackerTh .nav-tabs > li > a:focus {
+  background-color: var(--theme-primary-text-color);
+  border-color: var(--theme-primary-text-color);
+}
+body.hackerTh .umb-editor-wrapper {
+  background: var(--theme-primary-background-color);
+}
+body.hackerTh .umb-editor-drawer {
+  background: var(--theme-primary-background-color);
+  border-top: 1px solid var(--theme-primary-text-color);
+}
+body.hackerTh .umb-control-group {
+  border-bottom: 1px solid var(--theme-primary-text-color);
+}
+body.hackerTh label.control-label,
+body.hackerTh .control-label {
+  color: var(--theme-primary-text-color);
+}
+body.hackerTh textarea,
+body.hackerTh input[type="text"],
+body.hackerTh input[type="password"],
+body.hackerTh input[type="datetime"],
+body.hackerTh input[type="datetime-local"],
+body.hackerTh input[type="date"],
+body.hackerTh input[type="month"],
+body.hackerTh input[type="time"],
+body.hackerTh input[type="week"],
+body.hackerTh input[type="number"],
+body.hackerTh input[type="email"],
+body.hackerTh input[type="url"],
+body.hackerTh input[type="search"],
+body.hackerTh input[type="tel"],
+body.hackerTh input[type="color"],
+body.hackerTh .uneditable-input {
+  background-color: var(--theme-primary-text-color);
+  border: 1px solid var(--theme-primary-background-color);
+}
