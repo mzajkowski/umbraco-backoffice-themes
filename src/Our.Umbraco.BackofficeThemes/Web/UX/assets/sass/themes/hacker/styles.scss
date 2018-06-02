@@ -1,100 +1,91 @@
 ﻿html {
-    --theme-primary-text-color: var(--theme-primary-text-color);
-    --theme-primary-background-color: var(--theme-primary-background-color);
+  --theme-primary-text-color: var(--theme-primary-text-color);
+  --theme-primary-background-color: var(--theme-primary-background-color);
 }
 
-/* General */
+//* General */
 
-body.hackerTh {
+body {
+  &.hackerTh {
     color: var(--theme-primary-text-color);
     background-color: var(--theme-primary-background-color) !important;
     font-family: monospace;
     -webkit-transition: background-color 0.3s ease-in;
-    transition: background-color 0.3s ease-in
-}
-
-a {
-    color: var(--theme-primary-text-color);
-}
-
-.umb-editor-header,
-.umb-editor-sub-header,
-.umb-modalcolumn-header {
-    color: var(--theme-primary-text-color) !important;
-    background-color: var(--theme-primary-background-color) !important;
-    -webkit-transition: background-color 0.3s ease-in;
-    transition: background-color 0.3s ease-in
-}
-
-.umb-editor-header {
-    border-bottom: 1px solid var(--theme-primary-text-color);
-}
-
-.umb-modalcolumn-header {
-    border-bottom: 1px solid var(--theme-primary-text-color);
-}
-
-.umb-modalcolumn-body {
-    color: var(--theme-primary-text-color) !important;
-    background-color: var(--theme-primary-background-color) !important;
-    -webkit-transition: background-color 0.3s ease-in;
-    transition: background-color 0.3s ease-in
-}
-
-/* Search */
-
-.form-search {
-    .icon,
-    .icon-search {
-        color: var(--theme-primary-background-color);
+    transition: background-color 0.3s ease-in a {
+      color: var(--theme-primary-text-color);
     }
-    .search-input,
-    input.umb-panel-header-name-input {
+    .umb-editor-header,
+    .umb-editor-sub-header,
+    .umb-modalcolumn-header {
+      color: var(--theme-primary-text-color) !important;
+      background-color: var(--theme-primary-background-color) !important;
+      -webkit-transition: background-color 0.3s ease-in;
+      transition: background-color 0.3s ease-in
+    }
+    .umb-editor-header {
+      border-bottom: 1px solid var(--theme-primary-text-color);
+    }
+    .umb-modalcolumn-header {
+      border-bottom: 1px solid var(--theme-primary-text-color);
+    }
+    .umb-modalcolumn-body {
+      color: var(--theme-primary-text-color) !important;
+      background-color: var(--theme-primary-background-color) !important;
+      -webkit-transition: background-color 0.3s ease-in;
+      transition: background-color 0.3s ease-in
+    }
+    //* Search */
+    .form-search {
+      .icon,
+      .icon-search {
+        color: var(--theme-primary-background-color);
+      }
+      .search-input,
+      input.umb-panel-header-name-input {
         background: var(--theme-primary-text-color);
         border-color: var(--theme-primary-background-color);
-    }
-    .search-input:hover,
-    .search-input:focus,
-    .search-input:focus:hover {}
-    /* Buttons */
-    .btn,
-    .btn-info {
+      }
+      .search-input:hover,
+      .search-input:focus,
+      .search-input:focus:hover { color: inherit; }
+
+      //* Buttons */
+      .btn,
+      .btn-info {
         color: var(--theme-primary-background-color);
         background: var(--theme-primary-text-color);
-    }
-    .btn-primary .caret,
-    .btn-warning .caret,
-    .btn-danger .caret,
-    .btn-info .caret,
-    .btn-success .caret,
-    .btn-inverse .caret {
+      }
+      .btn-primary .caret,
+      .btn-warning .caret,
+      .btn-danger .caret,
+      .btn-info .caret,
+      .btn-success .caret,
+      .btn-inverse .caret {
         border-top-color: var(--theme-primary-background-color);
         border-bottom-color: var(--theme-primary-background-color);
-    }
-    /* Sections */
-    ul.sections {
+      }
+      //* Sections */
+      ul.sections {
         background-color: var(--theme-primary-background-color) !important;
         border-right: 1px solid var(--theme-primary-text-color);
         -webkit-transition: background-color 0.3s ease-in;
-        transition: background-color 0.3s ease-in 
-        
-        li {
-            border-left: 4px var(--theme-primary-background-color) solid;
+        transition: background-color 0.3s ease-in li {
+          border-left: 4px var(--theme-primary-background-color) solid;
         }
         li.avatar a img {
-            border: 1px solid var(--theme-primary-text-color);
+          border: 1px solid var(--theme-primary-text-color);
         }
         li [class^="icon-"],
         li [class*=" icon-"],
         li img.icon-section {
-            color: var(--theme-primary-text-color);
+          color: var(--theme-primary-text-color);
         }
         li.current,
         li:hover {
-            background-color: var(--theme-primary-text-color) !important;
-            border-left: 4px var(--theme-primary-text-color) solid;
-            -webkit-transition: background-color 0.3s ease-in;
-            transition: background-color 0.3s ease-in
+          background-color: var(--theme-primary-text-color) !important;
+          border-left: 4px var(--theme-primary-text-color) solid;
+          -webkit-transition: background-color 0.3s ease-in;
+          transition: background-color 0.3s ease-in
         }
         li.current a span,
         li:hover a span,
@@ -104,107 +95,109 @@ a {
         li:hover [class*=" icon-"],
         li.current img.icon-section,
         li:hover img.icon-section {
-            color: var(--theme-primary-background-color);
+          color: var(--theme-primary-background-color);
         }
-    }
-    .ui-resizable-e {
+      }
+      .ui-resizable-e {
         background-color: var(--theme-primary-text-color);
         border: 1px solid var(--theme-primary-background-color);
-    }
-    .navigation-inner-container {
+      }
+      .navigation-inner-container {
         border-right: 1px solid var(--theme-primary-text-color);
-    }
-    /* Umbraco Tree */
-    .umb-tree div:hover {
+      }
+      //* Umbraco Tree */
+      .umb-tree div:hover {
         background: var(--theme-primary-text-color);
-    }
-    .umb-tree li.root>div a,
-    .umb-tree li.root h5,
-    .umb-tree-header,
-    .umb-tree .icon,
-    .umb-actions i {
+      }
+      .umb-tree li.root>div a,
+      .umb-tree li.root h5,
+      .umb-tree-header,
+      .umb-tree .icon,
+      .umb-actions i {
         color: var(--theme-primary-text-color);
-    }
-    .umb-tree li.current>div,
-    .umb-tree div.selected {
+      }
+      .umb-tree li.current>div,
+      .umb-tree div.selected {
         background: var(--theme-primary-text-color);
-    }
-    .umb-tree li.current>div a.umb-options i,
-    .umb-tree div.selected i {
+      }
+      .umb-tree li.current>div a.umb-options i,
+      .umb-tree div.selected i {
         background: var(--theme-primary-background-color);
         border-color: var(--theme-primary-background-color);
-    }
-    .umb-tree li.current>div a,
-    .umb-tree li.current>div i.icon,
-    .umb-tree li.current>div ins,
-    .umb-tree li>div:hover a,
-    .umb-tree li>div:hover i.icon,
-    .umb-tree li>div:hover ins {
+      }
+      .umb-tree li.current>div a,
+      .umb-tree li.current>div i.icon,
+      .umb-tree li.current>div ins,
+      .umb-tree li>div:hover a,
+      .umb-tree li>div:hover i.icon,
+      .umb-tree li>div:hover ins {
         color: var(--theme-primary-background-color) !important;
         background-color: var(--theme-primary-text-color);
         border-color: var(--theme-primary-text-color);
-    }
-    /* Umbraco Actions */
-    .umb-actions li.sep {
+      }
+      //* Umbraco Actions */
+      .umb-actions li.sep {
         border-top: 1px solid var(--theme-primary-text-color);
-    }
-    .umb-actions a:hover,
-    .umb-actions a:focus,
-    .umb-actions li.selected {
+      }
+      .umb-actions a:hover,
+      .umb-actions a:focus,
+      .umb-actions li.selected {
         color: var(--theme-primary-background-color) !important;
         background: var(--theme-primary-text-color) !important;
-    }
-    .umb-actions a:hover i,
-    .umb-actions a:focus i,
-    .umb-actions li.selected i {
+      }
+      .umb-actions a:hover i,
+      .umb-actions a:focus i,
+      .umb-actions li.selected i {
         color: var(--theme-primary-background-color);
-    }
-    /* Editor */
-    .nav-tabs {
+      }
+      //* Editor */
+      .nav-tabs {
         border-bottom: 1px solid var(--theme-primary-text-color);
-    }
-    .nav-tabs>.active>a,
-    .nav-tabs>.active>a:hover,
-    .nav-tabs>.active>a:focus {
+      }
+      .nav-tabs>.active>a,
+      .nav-tabs>.active>a:hover,
+      .nav-tabs>.active>a:focus {
         background-color: var(--theme-primary-text-color);
         border: 1px solid var(--theme-primary-text-color);
-    }
-    .nav-tabs>li>a:hover,
-    .nav-tabs>li>a:focus {
+      }
+      .nav-tabs>li>a:hover,
+      .nav-tabs>li>a:focus {
         background-color: var(--theme-primary-text-color);
         border-color: var(--theme-primary-text-color);
-    }
-    .umb-editor-wrapper {
+      }
+      .umb-editor-wrapper {
         background: var(--theme-primary-background-color);
-    }
-    .umb-editor-drawer {
+      }
+      .umb-editor-drawer {
         background: var(--theme-primary-background-color);
         border-top: 1px solid var(--theme-primary-text-color);
-    }
-    .umb-control-group {
+      }
+      .umb-control-group {
         border-bottom: 1px solid var(--theme-primary-text-color);
-    }
-    label.control-label,
-    .control-label {
+      }
+      label.control-label,
+      .control-label {
         color: var(--theme-primary-text-color);
-    }
-    textarea,
-    input[type="text"],
-    input[type="password"],
-    input[type="datetime"],
-    input[type="datetime-local"],
-    input[type="date"],
-    input[type="month"],
-    input[type="time"],
-    input[type="week"],
-    input[type="number"],
-    input[type="email"],
-    input[type="url"],
-    input[type="search"],
-    input[type="tel"],
-    input[type="color"],
-    .uneditable-input {
+      }
+      textarea,
+      input[type="text"],
+      input[type="password"],
+      input[type="datetime"],
+      input[type="datetime-local"],
+      input[type="date"],
+      input[type="month"],
+      input[type="time"],
+      input[type="week"],
+      input[type="number"],
+      input[type="email"],
+      input[type="url"],
+      input[type="search"],
+      input[type="tel"],
+      input[type="color"],
+      .uneditable-input {
         background-color: var(--theme-primary-text-color);
         border: 1px solid var(--theme-primary-background-color);
+      }
     }
+  }
 }
