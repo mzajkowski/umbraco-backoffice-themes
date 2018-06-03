@@ -120,11 +120,15 @@
 			<BinFiles Include="$(CoreProjectDir)\bin\$(BuildConfig)\$(ProjectName).dll" />
 			<PdbFiles Include="$(CoreProjectDir)\bin\$(BuildConfig)\$(ProjectName).pdb" />
 			<SrcFiles Include="$(CoreProjectDir)\**\*.cs" Exclude="$(CoreProjectDir)\obj\**"/>
+			<DashboardXDTInstallFile Include="$(MSBuildProjectDirectory)\transforms\Dashboard.config.install.xdt" />     
+			<DashboardXDTUninstallFile Include="$(MSBuildProjectDirectory)\transforms\Dashboard.config.uninstall.xdt" />
 			<PluginFiles Include="$(CoreProjectDir)\Web\UI\**\*.*" />
 			<PackageFile Include="$(MSBuildProjectDirectory)\package.xml" />
 			<NuSpecFile Include="$(MSBuildProjectDirectory)\package.nuspec" />
 			<InstallPsFile Include="$(MSBuildProjectDirectory)\install.ps1" />
 		</ItemGroup>
+		<Copy SourceFiles="@(DashboardXDTInstallFile)" DestinationFolder="$(BuildNuGetDir)\Content\Config" />
+		<Copy SourceFiles="@(DashboardXDTUninstallFile)" DestinationFolder="$(BuildNuGetDir)\Content\Config" />
 		<Copy SourceFiles="@(BinFiles)" DestinationFolder="$(BuildUmbDir)\bin" />
 		<Copy SourceFiles="@(PackageFile)" DestinationFolder="$(BuildUmbDir)" />
 		<Copy SourceFiles="@(BinFiles)" DestinationFolder="$(BuildNuGetDir)\lib\net45" />
