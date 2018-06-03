@@ -328,3 +328,13 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+
+src/Our\.Umbraco\.BackofficeThemes/Web\.config
+
+src/Our\.Umbraco\.BackofficeThemes/App_Browsers/
+
+src/Our\.Umbraco\.BackofficeThemes/Config/
+
+src/Our\.Umbraco\.BackofficeThemes/umbraco/
+
+src/Our\.Umbraco\.BackofficeThemes/umbraco_client/
