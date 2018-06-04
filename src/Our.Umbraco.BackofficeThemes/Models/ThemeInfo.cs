@@ -1,25 +1,37 @@
 ﻿using System.IO;
+using Newtonsoft.Json;
 using Umbraco.Core;
 
 namespace Our.Umbraco.BackofficeThemes.Models
 {
     internal class ThemeInfo
     {
-        public string alias { get; set; }
-        public string title { get; set; }
-        public string path { get; set; }
-        public string thumbnail { get; set; }
-        public string description { get; set; }
-        public string version { get; set; }
+        [JsonProperty("alias")]
+        public string Alias { get; set; }
+
+        [JsonProperty("title")]
+        public string Title { get; set; }
+
+        [JsonProperty("path")]
+        public string Path { get; set; }
+
+        [JsonProperty("thumbnail")]
+        public string Thumbnail { get; set; }
+
+        [JsonProperty("description")]
+        public string Description { get; set; }
+
+        [JsonProperty("version")]
+        public string Version { get; set; }
 
         public static ThemeInfo Parse(string file, string baseUrl)
         {
             if (File.Exists(file) == false)
                 return null;
 
-            var alias = Path.GetFileNameWithoutExtension(file);
+            var alias = System.IO.Path.GetFileNameWithoutExtension(file);
             var title = alias.ToFirstUpperInvariant();
-            var path = baseUrl + Path.GetFileName(file);
+            var path = baseUrl + System.IO.Path.GetFileName(file);
             var thumbnail = baseUrl.Replace("/css/", "/img/") + alias + ".png";
             string description = null, version = null;
 
@@ -48,12 +60,12 @@ namespace Our.Umbraco.BackofficeThemes.Models
 
             return new ThemeInfo
             {
-                alias = alias,
-                title = title,
-                path = path,
-                thumbnail = thumbnail,
-                description = description,
-                version = version
+                Alias = alias,
+                Title = title,
+                Path = path,
+                Thumbnail = thumbnail,
+                Description = description,
+                Version = version
             };
         }
     }
