@@ -6,7 +6,7 @@
 			<areas>
 				  <area>developer</area>
 			</areas>
-			<tab caption="Backend Theme">
+			<tab caption="Backoffice Themes">
 				  <control>/App_Plugins/BackofficeThemes/Views/dashboard.html</control>
 			</tab>
 	</section>
