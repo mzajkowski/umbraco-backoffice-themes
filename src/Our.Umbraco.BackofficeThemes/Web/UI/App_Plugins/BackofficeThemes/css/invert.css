@@ -1,0 +1,19 @@
+﻿/*
+Theme Name: Invert Theme
+Description: Invert The Planet!
+Version: 1.0
+*/
+
+body {
+    filter: invert(100%) hue-rotate(90deg) sepia(25%);
+}
+
+#umbracoMainPageBody {
+    background-color: #000;
+}
+
+.umb-avatar,
+.umb-media-grid img,
+.umb-mediapicker img {
+    filter: invert(100%) hue-rotate(-90deg) sepia(0);
+}
